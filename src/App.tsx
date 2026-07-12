@@ -215,9 +215,8 @@ export default function App() {
     try {
       window.speechSynthesis.cancel();
       const letter = getBingoLetter(num);
-      const numberInWords = getNumberInWordsPt(num).toLowerCase();
-      // Phonetic pronunciation in Portuguese with elegant pacing
-      const utterance = new SpeechSynthesisUtterance(`Letra ${letter}... ${num}... ${letter}... de ${numberInWords}`);
+      // Clear, professional Portuguese bingo announcement: e.g., "Letra B... 12... B... 12"
+      const utterance = new SpeechSynthesisUtterance(`Letra ${letter}... ${num}... ${letter}... ${num}`);
       utterance.lang = "pt-BR";
       utterance.rate = 0.85;
       window.speechSynthesis.speak(utterance);
