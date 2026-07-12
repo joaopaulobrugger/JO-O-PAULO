@@ -1,6 +1,6 @@
 {
-  "name": "Painel de Bingo",
-  "description": "Painel profissional de Bingo para controle e marcação de números sorteados.",
+  "name": "Painel de Bingo Rainha",
+  "description": "Painel de Bingo Rainha ",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

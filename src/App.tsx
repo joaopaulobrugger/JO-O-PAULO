@@ -215,8 +215,8 @@ export default function App() {
     try {
       window.speechSynthesis.cancel();
       const letter = getBingoLetter(num);
-      // Clear, professional Portuguese bingo announcement: e.g., "Letra B... 12... B... 12"
-      const utterance = new SpeechSynthesisUtterance(`Letra ${letter}... ${num}... ${letter}... ${num}`);
+      // Clear, professional Portuguese bingo announcement with a longer delay before repeating: e.g., "Letra B... 12... [long pause]... Letra B... 12"
+      const utterance = new SpeechSynthesisUtterance(`Letra ${letter}, , ${num}, , , , , , Letra ${letter}, , ${num}`);
       utterance.lang = "pt-BR";
       utterance.rate = 0.85;
       window.speechSynthesis.speak(utterance);
@@ -892,7 +892,7 @@ export default function App() {
 
         {/* FOOTER INFO */}
         <div className="bg-slate-900 px-6 py-4 border-t border-slate-800 text-center text-[11px] text-slate-400 font-medium flex flex-col md:flex-row items-center justify-between gap-2">
-          <span>&copy; {new Date().getFullYear()} Painel de Bingo Profissional &bull; Homologado para Eventos e Sorteios</span>
+          <span>&copy; {new Date().getFullYear()} Bingo rainha da Paz  &bull; Homologado para Eventos e Sorteios</span>
           <span className="flex items-center gap-1.5 text-emerald-400 font-bold font-mono">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shadow-sm shadow-emerald-500" />
             GERADOR DE FLUXO ATIVO
